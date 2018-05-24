@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "ami_id" {
   description = "ID of the AMI to provision. This is a Nomad-AWS-Terraform-AMI"
-  default = "ami-03436466"
+  default = "ami-75132e10"
 }
 
 variable "instance_type" {

@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "ami_id" {
   description = "ID of the AMI to provision. Consul Build of Ubuntu 16.04"
-  default = "ami-0e37fd124747add56"
+  default = "ami-022f81c5506e84bc9"
 }
 
 variable "instance_type" {

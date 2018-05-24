@@ -18,6 +18,9 @@ variable "name" {
   default = "Provisioned very quickly by Terraform"
 }
 
+variable "key_name" {
+  description = "name of the SSH key for accessing the instance"
+}
 
 variable "volume_size" {
   description = "the size of root device"

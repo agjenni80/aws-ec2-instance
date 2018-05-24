@@ -25,3 +25,4 @@ variable "owner" {
 variable "ttl" { 
   description = "Hours until instances are reaped by N.E.P.T.R"
   default = "3"
+}

@@ -4,8 +4,8 @@ variable "aws_region" {
 }
 
 variable "ami_id" {
-  description = "ID of the AMI to provision. CentOS Linux 7"
-  default = "ami-e1496384"
+  description = "ID of the AMI to provision. Default is Ubuntu 14.04 Base Image"
+  default = "ami-2e1ef954"
 }
 
 variable "instance_type" {
@@ -17,6 +17,11 @@ variable "name" {
   description = "name to pass to Name tag"
   default = "ajennings"
 }
+
+variable "key_name" {
+   description = "name of the SSH key for accessing the instance"
+   default = "tfe-ajennings"
+  }  
 
 variable "volume_size" {
   description = "the size of root device"

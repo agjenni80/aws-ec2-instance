@@ -1,0 +1,37 @@
+import "tfplan"
+import "strings"
+
+# Allowed AMI's to be Used
+allowed_amis = [
+    "ami-009b65131ebb4890c",
+]
+
+# Get all AWS instances
+get_aws_instances = func() {
+  aws_instances = []
+  for tfplan.module_paths as path {
+    aws_instances += values(tfplan.module(path).resources.aws_instance) else []
+  }
+  # for debugging
+  # print(aws_instances)
+  
+  return aws_instances
+}
+
+# Gather instances
+aws_instances = get_aws_instances()
+
+# Check that all AWS instances are using approved AMIs
+all_aws_instances_using_approved_amis = rule {
+  all aws_instances as _, instances {
+    all instances as _, r {
+      all allowed_amis as allowed_ami {
+        r.applied.ami contains allowed_ami
+      }
+    }
+  }
+}
+
+main = rule {
+  all_aws_instances_using_approved_amis
+}

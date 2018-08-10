@@ -15,7 +15,7 @@ variable "instance_type" {
 
 variable "name" {
   description = "name to pass to Name tag"
-  default = "ajennings-test"
+  default = "ajennings-testing"
 }
 
 variable "key_name" {

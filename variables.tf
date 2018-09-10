@@ -31,3 +31,7 @@ variable "volume_size" {
 variable "public_key_path" {
   default = "/Users/agjennings/id_rsa.pub"
 }
+
+variable "key_pair" {
+  default ="tfe-ajennings"
+}

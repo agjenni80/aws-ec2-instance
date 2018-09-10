@@ -27,3 +27,7 @@ variable "volume_size" {
   description = "the size of root device"
   default = "40"
 }
+
+variable "public_key_path" {
+  default = "/Users/agjennings/id_rsa.pub"
+}

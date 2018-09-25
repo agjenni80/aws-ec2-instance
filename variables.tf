@@ -20,7 +20,7 @@ variable "name" {
 
 variable "key_name" {
    description = "name of the SSH key for accessing the instance"
-   default = "tfe-ajennings"
+   default = "ajennings-key"
   }  
 
 variable "volume_size" {
@@ -29,9 +29,9 @@ variable "volume_size" {
 }
 
 variable "public_key_path" {
-  default = "/Users/agjennings/id_rsa.pub"
+  default = "/Users/agjennings/ajennings-key.pub"
 }
 
 variable "key_pair" {
-  default ="tfe-ajennings"
+  default ="ajennings-key"
 }

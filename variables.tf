@@ -29,7 +29,7 @@ variable "volume_size" {
 }
 
 variable "public_key_path" {
-  default = "/Users/agjennings/ajennings-key.pub"
+  default = "/Users/agjennings/.ssh/ajennings-key.pub"
 }
 
 variable "key_pair" {

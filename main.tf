@@ -11,7 +11,7 @@ resource "aws_instance" "web" {
   instance_type = "${var.instance_type}"
   availability_zone = "${var.aws_region}a"
   associate_public_ip_address = "true"
-  count = 3
+  count =1 
   root_block_device {
     volume_size = "${var.volume_size}"
   }

@@ -20,7 +20,7 @@ resource "aws_instance" "web" {
 
      connection {
            type        = "ssh"
-           user        = "azureuser"
+           user        = "ec2-user"
            private_key = "${var.private_key}"
    
 }
@@ -38,7 +38,7 @@ resource "aws_instance" "web" {
     EOF
 
     environment     = "ajennings_test"
-    run_list        = ["recipe[chef_terraform_azure_demo]"]
+    run_list        = ["recipe[chef_terraform_aws_demo]"]
     node_name       = "chef-terraform"
     server_url      = "https://api.chef.io/organizations/ajennings"
     recreate_client = true

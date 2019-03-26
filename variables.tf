@@ -32,15 +32,6 @@ variable "public_key_path" {
   default = "/Users/agjennings/.ssh/ajennings-key.pub"
 }
 
-variable "key_pair" {
-  default ="ajennings-key"
-}
-
-variable "key_material" {
-   description   = "name of the SSH key for Chef"
-   default       = "ajennings"
-}
-
-variable "private_key" {
-   description   = "I'm a private key 2"
+variable "private_key_data" {
+  default =""
 }

@@ -27,3 +27,13 @@ variable "volume_size" {
   description = "the size of root device"
   default = "40"
 }
+
+variable "s3_bucket_arn" {
+  description  = "arn of the s3 bucket for collection"
+  default      = "arn:aws:s3:::hc-sec-flow-logs"
+  }
+
+variable "aws_vpc" { 
+  description   = "vpc id"
+  default       = "vpc-0a317ca1447094027"
+  } 

@@ -15,6 +15,18 @@ resource "aws_instance" "ubuntu" {
   root_block_device {
     volume_size = "${var.volume_size}"
   }
+  
+  resource "aws_flow_log" "hc-sec-example" {
+    log_destination      = "${var.s3_bucket_arn}"
+    log_destination_type = "s3"
+    traffic_type         = "ALL"
+    vpc_id               = "${var.aws_vpc}"
+ }
+  
+  resource "aws_s3_bucket" "hc-sec-example" {
+    bucket  = "hc-sec-flow-logs"
+    }
+  
   tags {
     Name = "${var.name}"
   }

@@ -14,5 +14,5 @@ module "vpc_flowlogs" {
 
   bucket_name_prefix = "hc-sec-flow-logs"
   bucket_region = "us-east-1"
-  aws_vpc = "vpc-0014580f256a1c96b"
+  vpc_id = "vpc-0014580f256a1c96b"
 }

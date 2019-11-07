@@ -1,6 +1,6 @@
 variable "aws_region" {
   description = "AWS region"
-  default = "us-east-2"
+  default = "us-east-1"
 }
 
 variable "ami_id" {
@@ -35,5 +35,15 @@ variable "s3_bucket_arn" {
 
 variable "aws_vpc" { 
   description   = "vpc id"
-  default       = "vpc-0a317ca1447094027"
+  default       = "vpc-064c0295246308e6a"
   } 
+
+variable "bucket_name_prefix" {
+  description = "S3 bucket name"
+  default = "hc-sec-flow-logs"
+}
+
+variable "bucket_region" {
+  description = "S3 bucket region"
+  default = "us-east-1"
+}

@@ -28,11 +28,6 @@ variable "volume_size" {
   default = "40"
 }
 
-variable "s3_bucket_arn" {
-  description  = "arn of the s3 bucket for collection"
-  default      = "arn:aws:s3:::hc-sec-flow-logs"
-  }
-
 variable "aws_vpc" { 
   description   = "vpc id"
   default       = "vpc-064c0295246308e6a"
